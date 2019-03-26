@@ -1,18 +1,20 @@
 # Slack GPT2
 Just @ this bot and type in a message to get an output from GPT2 conditioned on the message.
-![](./slack.png)
+![](./slack.jpg)
 
 # Installation
 First setup your slack integration and obtain the bot oauth token. Then paste the bot token
 into `starterbot.py`.
 
 ```
-pip3 install -r requirements.txt
+conda create -n slackbot python=3.6
+source activate slackbot
+pip install -r requirements.txt
 cd gpt2
-pip3 install -r requirements.txt
-python3 download_model.py 117M
+pip install -r requirements.txt
+python download_model.py 117M
 cd ..
-python3 starterbot.py
+python starterbot.py
 ```
 # Thanks to these libraries for making it easy.
 # slack-starterbot
